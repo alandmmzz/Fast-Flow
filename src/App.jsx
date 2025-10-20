@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
+import BottomNav from './components/BottomNav/BottomNav';
+import ScrollToTop from './pages/ScrollToTop';
+import Footer from './components/Footer/Footer';
+import HomeContainer from './pages/Home/HomeContainer';
+import ContactContainer from './pages/Contact/ContactContainer';
+import CartContainer from './pages/Cart/CartContainer';
+import CheckoutContainer from './pages/Checkout/CheckoutContainer';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <NavBar />
+        <ScrollToTop />
+        <Routes>
+          <Route exact path="/" element={<HomeContainer />} />
+          <Route exact path="/contacto" element={<ContactContainer />} />
+          <Route exact path="/cart" element={<CartContainer />} />
+          <Route exact path="/checkout" element={<CheckoutContainer />} />
+        </Routes>
+        <Footer />
+        <BottomNav />
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
