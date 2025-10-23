@@ -1,24 +1,21 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import MobileCarousel from '../MobileCarousel/MobileCarousel';
 import './Banners.css';
 
 export default function Banners() {
 
     return (
         <>
-            <section id="contacto">
-                <Link to="/contacto" >
-                    <div className="contenedor">
-                        <div className="contacto-hero">
-                            <h3>Proyecto en mente?</h3>
-                            <h3>Trabajemos juntos :)</h3>
-                        </div>
-                        <div className="contacto-mail">
-                            <p>Ponete en contacto conmigo.</p>
-                            <img src="/assets/img/icons/right-arrow.png" alt="" />
-                        </div>
-                    </div>                   
-                </Link>
+            <section id="banners" className="banners-section">
+                <MobileCarousel
+                    images={[
+                    "https://placehold.co/600x400",
+                    "https://placehold.co/600x400",
+                    "https://placehold.co/600x400",
+                    ]}
+                    className="rounded-2xl overflow-hidden shadow-md"
+                />
             </section>
         </>
     )

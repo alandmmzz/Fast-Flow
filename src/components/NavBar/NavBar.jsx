@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion"; // opcional, para animaciones suaves
 import { Menu, X } from "lucide-react"; // íconos livianos (npm install lucide-react)
 import './NavBar.css';
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 w-full shadow-md flex justify-between items-center px-4 py-3 z-50">
         {/* Botón menú */}
         <button onClick={() => setOpen(true)} className="p-2 bg-transparent border-none cursor-pointer">
-          <Menu size={28} />
+          <Menu size={20} />
         </button>
 
         {/* Logo */}
@@ -58,18 +59,18 @@ export default function Navbar() {
 
               {/* Enlaces */}
               <nav className="flex flex-col gap-4 text-lg font-medium">
-                <a href="#products" onClick={() => setOpen(false)}>
+                <Link to="/products" onClick={() => setOpen(false)}>
                   Productos
-                </a>
-                <a href="#categories" onClick={() => setOpen(false)}>
+                </Link>
+                <Link to="/categories" onClick={() => setOpen(false)}>
                   Categorias
-                </a>
-                <a href="#aboutus" onClick={() => setOpen(false)}>
+                </Link>
+                <Link to="/aboutus" onClick={() => setOpen(false)}>
                   Nosotros
-                </a>
-                <a href="#contact" onClick={() => setOpen(false)}>
+                </Link>
+                <Link to="/contact" onClick={() => setOpen(false)}>
                   Contacto
-                </a>
+                </Link>
               </nav>
             </motion.aside>
           </>

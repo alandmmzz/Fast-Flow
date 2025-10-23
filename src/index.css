@@ -15,12 +15,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
 }
 
 h1 {
@@ -39,4 +45,13 @@ h1 {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* hide-scrollbar global */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

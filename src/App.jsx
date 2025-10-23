@@ -8,6 +8,8 @@ import HomeContainer from './pages/Home/HomeContainer';
 import ContactContainer from './pages/Contact/ContactContainer';
 import CartContainer from './pages/Cart/CartContainer';
 import CheckoutContainer from './pages/Checkout/CheckoutContainer';
+import ProductGridContainer from './pages/ProductGridContainer/ProductGridContainer';
+import CategoriesGridContainer from './pages/CategoriesGridContainer/CategoriesGridContainer';
 
 function App() {
 
@@ -21,6 +23,9 @@ function App() {
           <Route exact path="/contacto" element={<ContactContainer />} />
           <Route exact path="/cart" element={<CartContainer />} />
           <Route exact path="/checkout" element={<CheckoutContainer />} />
+          <Route exact path="/products" element={<ProductGridContainer />} />
+          <Route exact path="/products/:categoryId" element={<ProductGridContainer />} />
+          <Route exact path="/categories" element={<CategoriesGridContainer />} />
         </Routes>
         <Footer />
         <BottomNav />
