@@ -19,16 +19,18 @@ export default function ProductGrid({ products = [], onAddToCart }) {
     <div
       className="
         grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5
-        gap-4 sm:gap-6
+        gap-3 sm:gap-6
       "
     >
       {products.map((p, i) => (
         <ProductCard
           key={i}
+          id={p.id}
           image={p.image}
           name={p.name}
           price={p.price}
           onAdd={() => onAddToCart?.(p)}
+          display="grid"
         />
       ))}
     </div>

@@ -24,7 +24,7 @@ export default function ProductSlider({ products = [], onAddToCart }) {
   };
 
   return (
-    <section className="my-6 px-4 overflow-hidden w-full mx-auto">
+    <section className="my-6 overflow-hidden w-full mx-auto">
         <h2 className="text-2xl font-semibold mb-4">Nuestros favoritos</h2>
         <div className="relative w-full">
         {/* Flechas visibles en desktop */}
@@ -51,10 +51,12 @@ export default function ProductSlider({ products = [], onAddToCart }) {
             {products.map((p, i) => (
             <ProductCard
                 key={i}
+                id={p.id}
                 image={p.image}
                 name={p.name}
                 price={p.price}
                 onAdd={() => onAddToCart?.(p)}
+                display="slider"
             />
             ))}
         </div>

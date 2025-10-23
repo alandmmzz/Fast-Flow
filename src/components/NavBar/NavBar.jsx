@@ -22,7 +22,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <img
-          src="assets/logos/blanco.png"
+          src="/assets/logos/blanco.png"
           alt="Logo"
           className="h-8 object-contain select-none"
         />

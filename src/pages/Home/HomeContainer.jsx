@@ -5,32 +5,23 @@ import Contact from '../../components/Contact/Contact';
 import CategorySlider from '../../components/CategorySlider/CategorySlider';
 import ProductSlider from '../../components/ProductSlider/ProductSlider';
 
+import products from "../../data/products.json";
+import categories from "../../data/categories.json";
+
 export default function HomeContainer() {
+    const featuredProducts = products.filter(product => product.featured);
+    const discountedProducts = products.filter(product => product.discounted);
 
     return (
         <>
             <Banners />
             <CategorySlider
-                categories={[
-                    { title: "Heladeras", image: "https://placehold.co/600x400" },
-                    { title: "Televisores", image: "https://placehold.co/600x400" },
-                    { title: "Audio", image: "https://placehold.co/600x400" },
-                    { title: "Cocina", image: "https://placehold.co/600x400" },
-                ]}
+                categories={categories}
             />
             <ProductSlider
-                products={[
-                    { name: "Heladera No Frost", image: "https://placehold.co/600x400", price: "18.990" },
-                    { name: "Smart TV 50'' 4K", image: "https://placehold.co/600x400", price: "22.490" },
-                    { name: "Smart TV 50'' 4K", image: "https://placehold.co/600x400", price: "22.490" },
-                    { name: "Smart TV 50'' 4K", image: "https://placehold.co/600x400", price: "22.490" },
-                    { name: "Smart TV 50'' 4K", image: "https://placehold.co/600x400", price: "22.490" },
-                    { name: "Smart TV 50'' 4K", image: "https://placehold.co/600x400", price: "22.490" },
-                    { name: "Smart TV 50'' 4K", image: "https://placehold.co/600x400", price: "22.490" },
-                ]}
+                products={featuredProducts}
                 onAddToCart={(product) => console.log("Agregar", product)}
             />
-            <Contact />
         </>
     )
 }

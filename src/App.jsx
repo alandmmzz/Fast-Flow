@@ -8,8 +8,9 @@ import HomeContainer from './pages/Home/HomeContainer';
 import ContactContainer from './pages/Contact/ContactContainer';
 import CartContainer from './pages/Cart/CartContainer';
 import CheckoutContainer from './pages/Checkout/CheckoutContainer';
-import ProductGridContainer from './pages/ProductGridContainer/ProductGridContainer';
-import CategoriesGridContainer from './pages/CategoriesGridContainer/CategoriesGridContainer';
+import ProductsPage from './pages/ProductsPage/ProductsPage';
+import ProductDetailPage from './pages/ProductDetailPage/ProductDetailPage';
+import CategoriesPage from './pages/CategoriesPage/CategoriesPage';
 
 function App() {
 
@@ -23,9 +24,10 @@ function App() {
           <Route exact path="/contacto" element={<ContactContainer />} />
           <Route exact path="/cart" element={<CartContainer />} />
           <Route exact path="/checkout" element={<CheckoutContainer />} />
-          <Route exact path="/products" element={<ProductGridContainer />} />
-          <Route exact path="/products/:categoryId" element={<ProductGridContainer />} />
-          <Route exact path="/categories" element={<CategoriesGridContainer />} />
+          <Route exact path="/products" element={<ProductsPage />} />
+          <Route exact path="/products/:categoryId" element={<ProductsPage />} />
+          <Route exact path="/product/:productId" element={<ProductDetailPage />} />
+          <Route exact path="/categories" element={<CategoriesPage />} />
         </Routes>
         <Footer />
         <BottomNav />

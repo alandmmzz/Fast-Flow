@@ -55,7 +55,7 @@ export default function MobileCarousel({ images = [], className = "" }) {
                 {safeImages.map((src, i) => (
                     <div
                         key={i}
-                        className="snap-start shrink-0 w-full h-52 sm:h-64 md:h-80 lg:h-[28rem] relative"
+                        className="snap-start shrink-0 w-full h-52  max-h-[150px] sm:h-64 md:h-80 lg:h-[28rem] relative"
                     >
                         {/* Imagen full-bleed */}
                         <img

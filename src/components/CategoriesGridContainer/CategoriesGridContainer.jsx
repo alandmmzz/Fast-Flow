@@ -1,4 +1,4 @@
-import CategoriesGrid from "../components/CategoriesGrid/CategoriesGrid";
+import CategoriesGrid from "../CategoriesGrid/CategoriesGrid";
 
 export default function CategoriesGridContainer() {
   const categories = [
@@ -16,7 +16,7 @@ export default function CategoriesGridContainer() {
 
   return (
     <section className="px-4 py-6">
-      <h1 className="text-lg font-semibold mb-4">Categorías</h1>
+      <h2 className="text-lg font-semibold mb-4">Categorías</h2>
       <CategoriesGrid categories={categories} onSelect={handleSelectCategory} />
     </section>
   );

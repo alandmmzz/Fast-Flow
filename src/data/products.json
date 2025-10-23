@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Heladera No Frost 300L Samsung",
+    "image": "https://placehold.co/600x400?text=Heladera+Samsung",
+    "gallery": [
+      "https://placehold.co/600x400?text=Heladera+1",
+      "https://placehold.co/600x400?text=Heladera+2",
+      "https://placehold.co/600x400?text=Heladera+3"
+    ],
+    "description": "Heladera No Frost con freezer superior, eficiencia energética A+, control digital y diseño moderno. Capacidad total 300L.",
+    "old_price": 23990,
+    "price": 18990,
+    "category": "Heladeras",
+    "marca": "Samsung"
+  },
+  {
+    "id": 2,
+    "name": "Smart TV 50'' 4K UHD LG",
+    "image": "https://placehold.co/600x400?text=TV+LG+4K",
+    "gallery": [
+      "https://placehold.co/600x400?text=TV+Frente",
+      "https://placehold.co/600x400?text=TV+Costado",
+      "https://placehold.co/600x400?text=TV+Ambiente"
+    ],
+    "description": "Televisor Smart 50 pulgadas con resolución 4K UHD, sistema webOS y compatibilidad con Alexa y Google Assistant.",
+    "old_price": 32990,
+    "price": 25990,
+    "category": "Televisores",
+    "marca": "LG"
+  },
+  {
+    "id": 3,
+    "name": "Microondas Digital 30L Daewoo",
+    "image": "https://placehold.co/600x400?text=Microondas+Daewoo",
+    "gallery": [
+      "https://placehold.co/600x400?text=Microondas+1",
+      "https://placehold.co/600x400?text=Microondas+2",
+      "https://placehold.co/600x400?text=Microondas+3"
+    ],
+    "description": "Microondas digital con 5 niveles de potencia, descongelado automático y temporizador programable. Capacidad 30L.",
+    "old_price": 9990,
+    "price": 7990,
+    "category": "Cocina",
+    "marca": "Daewoo"
+  },
+  {
+    "id": 4,
+    "name": "Lavarropas Automático 8kg Whirlpool",
+    "image": "https://placehold.co/600x400?text=Lavarropas+Whirlpool",
+    "gallery": [
+      "https://placehold.co/600x400?text=Lavarropas+1",
+      "https://placehold.co/600x400?text=Lavarropas+2",
+      "https://placehold.co/600x400?text=Lavarropas+3"
+    ],
+    "description": "Lavarropas automático con 12 programas de lavado, carga frontal y eficiencia energética A++. Capacidad 8kg.",
+    "old_price": 24990,
+    "price": 19500,
+    "category": "Lavarropas",
+    "marca": "Whirlpool"
+  },
+  {
+    "id": 5,
+    "name": "Cafetera Espresso Oster PrimaLatte",
+    "image": "https://placehold.co/600x400?text=Cafetera+Oster",
+    "gallery": [
+      "https://placehold.co/600x400?text=Cafetera+1",
+      "https://placehold.co/600x400?text=Cafetera+2",
+      "https://placehold.co/600x400?text=Cafetera+3"
+    ],
+    "description": "Cafetera espresso con bomba italiana de 15 bares, depósito de leche y función automática para capuchino y latte.",
+    "old_price": 9990,
+    "price": 8290,
+    "category": "Cocina",
+    "marca": "Oster"
+  },
+  {
+    "id": 6,
+    "name": "Aire Acondicionado Split Inverter 3500W Philco",
+    "image": "https://placehold.co/600x400?text=Aire+Philco",
+    "gallery": [
+      "https://placehold.co/600x400?text=Aire+1",
+      "https://placehold.co/600x400?text=Aire+2",
+      "https://placehold.co/600x400?text=Aire+3"
+    ],
+    "description": "Aire acondicionado Split frío/calor con tecnología Inverter, control remoto y eficiencia energética clase A.",
+    "old_price": 29990,
+    "price": 25990,
+    "category": "Climatización",
+    "marca": "Philco"
+  },
+  {
+    "id": 7,
+    "name": "Parlante Bluetooth JBL Charge 5",
+    "image": "https://placehold.co/600x400?text=Parlante+JBL",
+    "gallery": [
+      "https://placehold.co/600x400?text=Parlante+1",
+      "https://placehold.co/600x400?text=Parlante+2",
+      "https://placehold.co/600x400?text=Parlante+3"
+    ],
+    "description": "Parlante portátil resistente al agua con Bluetooth 5.1, batería de 20 horas y sonido JBL Original Pro.",
+    "old_price": 15990,
+    "price": 13490,
+    "category": "Audio",
+    "marca": "JBL"
+  },
+  {
+    "id": 8,
+    "name": "Barra de Sonido Sony HT-S100F",
+    "image": "https://placehold.co/600x400?text=Barra+Sony",
+    "gallery": [
+      "https://placehold.co/600x400?text=Barra+1",
+      "https://placehold.co/600x400?text=Barra+2",
+      "https://placehold.co/600x400?text=Barra+3"
+    ],
+    "description": "Barra de sonido compacta con tecnología Bass Reflex, Bluetooth y puerto HDMI ARC. Ideal para mejorar el audio del TV.",
+    "old_price": 18990,
+    "price": 14990,
+    "category": "Audio",
+    "marca": "Sony"
+  },
+  {
+    "id": 9,
+    "name": "Televisor 32'' HD Philips",
+    "image": "https://placehold.co/600x400?text=TV+Philips",
+    "gallery": [
+      "https://placehold.co/600x400?text=TV+1",
+      "https://placehold.co/600x400?text=TV+2",
+      "https://placehold.co/600x400?text=TV+3"
+    ],
+    "description": "Smart TV de 32 pulgadas con sistema SAPHI, HDR10 y conectividad Wi-Fi integrada.",
+    "old_price": 18990,
+    "price": 14990,
+    "category": "Televisores",
+    "marca": "Philips"
+  },
+  {
+    "id": 10,
+    "name": "Heladera Cíclica Patrick 250L",
+    "image": "https://placehold.co/600x400?text=Heladera+Patrick",
+    "gallery": [
+      "https://placehold.co/600x400?text=Heladera+1",
+      "https://placehold.co/600x400?text=Heladera+2",
+      "https://placehold.co/600x400?text=Heladera+3"
+    ],
+    "description": "Heladera cíclica con freezer superior, bajo consumo y control de temperatura manual. Capacidad total 250L.",
+    "old_price": 21990,
+    "price": 17990,
+    "category": "Heladeras",
+    "marca": "Patrick"
+  }
+]

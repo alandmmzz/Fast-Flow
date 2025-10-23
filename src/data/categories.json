@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Heladeras",
+    "image": "https://placehold.co/400x300?text=Heladeras"
+  },
+  {
+    "id": 2,
+    "name": "Televisores",
+    "image": "https://placehold.co/400x300?text=Televisores"
+  },
+  {
+    "id": 3,
+    "name": "Audio",
+    "image": "https://placehold.co/400x300?text=Audio"
+  },
+  {
+    "id": 4,
+    "name": "Cocina",
+    "image": "https://placehold.co/400x300?text=Cocina"
+  },
+  {
+    "id": 5,
+    "name": "Lavarropas",
+    "image": "https://placehold.co/400x300?text=Lavarropas"
+  },
+  {
+    "id": 6,
+    "name": "Climatización",
+    "image": "https://placehold.co/400x300?text=Aire+Acondicionado"
+  }
+]

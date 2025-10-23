@@ -8,7 +8,6 @@ export default function HomeContainer() {
         <>
             <BackButton fallback="/" label="Volver atrás" />
             <Banners />
-            <Contact />
         </>
     )
 }

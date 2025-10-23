@@ -12,7 +12,7 @@ export default function BottomNav() {
             {/* Tienda */}
             <Link
                 to="/"
-                className="flex flex-col items-center ttext-neutral-400 hover:text-neutral-50 active:scale-90 transition-transform"
+                className="flex flex-col items-center text-neutral-400 hover:text-neutral-50 active:scale-90 transition-transform"
             >
                 <FaStore size={20} />
                 <span className="text-xs">Tienda</span>
