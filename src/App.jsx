@@ -1,6 +1,9 @@
+import React, {useState} from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
+
 import NavBar from "./components/NavBar/NavBar";
+import SearchBar from "./components/SearchBar/SearchBar";
 import BottomNav from "./components/BottomNav/BottomNav";
 import Footer from "./components/Footer/Footer";
 import Newsletter from "./components/Newsletter/Newsletter";
@@ -14,15 +17,19 @@ import ProductsPage from "./pages/ProductsPage/ProductsPage";
 import ProductDetailPage from "./pages/ProductDetailPage/ProductDetailPage";
 import CategoriesPage from "./pages/CategoriesPage/CategoriesPage";
 
+import { Toaster } from "sonner";
+
 // 🔹 Componente interno que controla el layout
 function Layout() {
-  const location = useLocation();
-  const hideFooterRoutes = ["/cart", "/checkout"];
+    const location = useLocation();
+    const hideFooterRoutes = ["/cart", "/checkout"];
+    const [showSearch, setShowSearch] = useState(false);
 
   return (
     <>
         <NavBar />
         <ScrollToTop />
+        <SearchBar visible={showSearch} onClose={() => setShowSearch(false)} />
 
         <Routes>
             <Route exact path="/" element={<HomeContainer />} />
@@ -43,7 +50,7 @@ function Layout() {
             </>
         )}
 
-        <BottomNav />
+        <BottomNav onSearchToggle={() => setShowSearch((v) => !v)} />
     </>
   );
 }
@@ -54,6 +61,7 @@ export default function App() {
         <CartProvider>
             <BrowserRouter>
                 <Layout />
+                <Toaster position="top-center" richColors />
             </BrowserRouter>
         </CartProvider>
     );

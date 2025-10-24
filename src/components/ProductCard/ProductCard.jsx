@@ -2,6 +2,7 @@ import React from "react";
 import { ShoppingCart } from "lucide-react"; // podés usar el ícono que quieras o sacarlo
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
+import { toast } from "sonner";
 
 /**
  * Props:
@@ -43,7 +44,11 @@ export default function ProductCard({id, image, name, price, display }) {
                     <p className="text-sm text-gray-500 dark:text-gray-400">${price}</p>
 
                     <button
-                    onClick={() => addToCart({ id, image, name, price })}
+                    onClick={(e) => {
+                        e.preventDefault(); // evita que el Link se dispare
+                        addToCart({ id, image, name, price });
+                        toast.success(`${name} fue agregado al carrito 🛒`);
+                    }}
                     className="
                         mt-2 flex items-center justify-center gap-1
                         bg-blue-600 hover:bg-blue-700 active:bg-blue-800

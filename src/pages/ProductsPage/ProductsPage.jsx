@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import BackButton from "../../components/BackButton/BackButton";
 import ProductGrid from "../../components/ProductGrid/ProductGrid";
 
 export default function ProductsPage() {
     const { categoryId } = useParams();
+    const location = useLocation();
+
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    // 🔹 Extraer el parámetro de búsqueda
+    const query = new URLSearchParams(location.search).get("search");
 
     useEffect(() => {
         const fetchData = async () => {
@@ -16,19 +21,31 @@ export default function ProductsPage() {
             const data = await res.json();
             setProducts(data);
 
-            // 🔹 Filtro actualizado para soportar múltiples categorías
-            if (categoryId) {
-            const filtered = data.filter(
+            let filtered = data;
+
+            // 🔍 Si hay un término de búsqueda, filtra por nombre o marca
+            if (query) {
+            const searchTerm = query.toLowerCase();
+            filtered = data.filter(
+                (p) =>
+                p.name.toLowerCase().includes(searchTerm) ||
+                p.marca.toLowerCase().includes(searchTerm)
+            );
+            }
+
+            // 🏷️ Si hay categoría (y no hay búsqueda), filtra por categoría
+            else if (categoryId) {
+            filtered = data.filter(
                 (p) =>
                 Array.isArray(p.categories) &&
                 p.categories.some(
                     (cat) => cat.toLowerCase() === categoryId.toLowerCase()
                 )
             );
-            setFilteredProducts(filtered);
-            } else {
-            setFilteredProducts(data);
             }
+
+            // 💾 Guardar los resultados finales
+            setFilteredProducts(filtered);
         } catch (err) {
             console.error("Error cargando productos:", err);
         } finally {
@@ -37,7 +54,7 @@ export default function ProductsPage() {
         };
 
         fetchData();
-    }, [categoryId]);
+    }, [categoryId, query]);
 
     if (loading) {
         return (
@@ -47,18 +64,19 @@ export default function ProductsPage() {
         );
     }
 
-    // Capitalizar el título (por estética)
-    const formattedTitle = categoryId
-        ? categoryId.charAt(0).toUpperCase() + categoryId.slice(1)
-        : "Todos los productos";
+    // 📌 Título dinámico
+    let title = "Todos los productos";
+    if (query) {
+        title = `Resultados para "${query}"`;
+    } else if (categoryId) {
+        title = categoryId.charAt(0).toUpperCase() + categoryId.slice(1);
+    }
 
     return (
         <section className="px-4 py-6">
         <BackButton fallback="/categories" label="Volver" />
 
-        <h2 className="text-xl font-semibold mb-4 capitalize">
-            {formattedTitle}
-        </h2>
+        <h2 className="text-xl font-semibold mb-4 capitalize">{title}</h2>
 
         <ProductGrid
             products={filteredProducts}
