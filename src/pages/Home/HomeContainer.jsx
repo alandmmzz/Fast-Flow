@@ -4,6 +4,10 @@ import Banners from "../../components/Banners/Banners";
 import Contact from "../../components/Contact/Contact";
 import CategorySlider from "../../components/CategorySlider/CategorySlider";
 import ProductSlider from "../../components/ProductSlider/ProductSlider";
+import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
+import ShippingInfo from "../../components/ShippingInfo/ShippingInfo";
+import Hero from "../../components/Hero/Hero";
+
 
 export default function HomeContainer() {
     // 🧩 Estados para productos y categorías
@@ -43,6 +47,7 @@ export default function HomeContainer() {
   return (
     <>
         <Banners />
+        <Hero />
 
         {/* ✅ Solo renderizamos si hay categorías */}
         {categories.length > 0 && (
@@ -67,6 +72,8 @@ export default function HomeContainer() {
             />
         )}
 
+        <WhyChooseUs />
+        <ShippingInfo />
     </>
   );
 }

@@ -3,6 +3,7 @@ import { CartProvider } from "./context/CartContext";
 import NavBar from "./components/NavBar/NavBar";
 import BottomNav from "./components/BottomNav/BottomNav";
 import Footer from "./components/Footer/Footer";
+import Newsletter from "./components/Newsletter/Newsletter";
 import ScrollToTop from "./pages/ScrollToTop";
 
 import HomeContainer from "./pages/Home/HomeContainer";
@@ -20,35 +21,40 @@ function Layout() {
 
   return (
     <>
-      <NavBar />
-      <ScrollToTop />
+        <NavBar />
+        <ScrollToTop />
 
-      <Routes>
-        <Route exact path="/" element={<HomeContainer />} />
-        <Route exact path="/contacto" element={<ContactContainer />} />
-        <Route exact path="/cart" element={<CartPage />} />
-        <Route exact path="/checkout" element={<CheckoutContainer />} />
-        <Route exact path="/products" element={<ProductsPage />} />
-        <Route exact path="/products/:categoryId" element={<ProductsPage />} />
-        <Route exact path="/product/:productId" element={<ProductDetailPage />} />
-        <Route exact path="/categories" element={<CategoriesPage />} />
-      </Routes>
+        <Routes>
+            <Route exact path="/" element={<HomeContainer />} />
+            <Route exact path="/contacto" element={<ContactContainer />} />
+            <Route exact path="/categories" element={<CategoriesPage />} />
+            <Route exact path="/products" element={<ProductsPage />} />
+            <Route exact path="/products/:categoryId" element={<ProductsPage />} />
+            <Route exact path="/product/:productId" element={<ProductDetailPage />} />
+            <Route exact path="/cart" element={<CartPage />} />
+            <Route exact path="/checkout" element={<CheckoutContainer />} />
+        </Routes>
 
-      {/* 🔹 Footer solo si no estamos en rutas donde molesta */}
-      {!hideFooterRoutes.includes(location.pathname) && <Footer />}
+        {/* 🔹 Footer y Newsletter solo si no estamos en rutas donde molesta */}
+        {!hideFooterRoutes.includes(location.pathname) && (
+            <>
+                <Newsletter/>
+                <Footer />
+            </>
+        )}
 
-      <BottomNav />
+        <BottomNav />
     </>
   );
 }
 
 // 🔹 App principal
 export default function App() {
-  return (
-    <CartProvider>
-      <BrowserRouter>
-        <Layout />
-      </BrowserRouter>
-    </CartProvider>
-  );
+    return (
+        <CartProvider>
+            <BrowserRouter>
+                <Layout />
+            </BrowserRouter>
+        </CartProvider>
+    );
 }
