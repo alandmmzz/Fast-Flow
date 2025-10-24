@@ -11,7 +11,7 @@
     "description": "Heladera No Frost con freezer superior, eficiencia energética A+, control digital y diseño moderno. Capacidad total 300L.",
     "old_price": 23990,
     "price": 18990,
-    "category": "Heladeras",
+    "categories": ["Heladeras", "Featured"],
     "marca": "Samsung"
   },
   {
@@ -26,7 +26,7 @@
     "description": "Televisor Smart 50 pulgadas con resolución 4K UHD, sistema webOS y compatibilidad con Alexa y Google Assistant.",
     "old_price": 32990,
     "price": 25990,
-    "category": "Televisores",
+    "categories": ["Televisores", "Featured", "Best Offers"],
     "marca": "LG"
   },
   {
@@ -41,7 +41,7 @@
     "description": "Microondas digital con 5 niveles de potencia, descongelado automático y temporizador programable. Capacidad 30L.",
     "old_price": 9990,
     "price": 7990,
-    "category": "Cocina",
+    "categories": ["Cocina", "Best Offers"],
     "marca": "Daewoo"
   },
   {
@@ -56,7 +56,7 @@
     "description": "Lavarropas automático con 12 programas de lavado, carga frontal y eficiencia energética A++. Capacidad 8kg.",
     "old_price": 24990,
     "price": 19500,
-    "category": "Lavarropas",
+    "categories": ["Lavarropas", "Featured"],
     "marca": "Whirlpool"
   },
   {
@@ -71,7 +71,7 @@
     "description": "Cafetera espresso con bomba italiana de 15 bares, depósito de leche y función automática para capuchino y latte.",
     "old_price": 9990,
     "price": 8290,
-    "category": "Cocina",
+    "categories": ["Cocina", "Best Offers"],
     "marca": "Oster"
   },
   {
@@ -86,7 +86,7 @@
     "description": "Aire acondicionado Split frío/calor con tecnología Inverter, control remoto y eficiencia energética clase A.",
     "old_price": 29990,
     "price": 25990,
-    "category": "Climatización",
+    "categories": ["Climatización", "Featured"],
     "marca": "Philco"
   },
   {
@@ -101,7 +101,7 @@
     "description": "Parlante portátil resistente al agua con Bluetooth 5.1, batería de 20 horas y sonido JBL Original Pro.",
     "old_price": 15990,
     "price": 13490,
-    "category": "Audio",
+    "categories": ["Audio", "Featured"],
     "marca": "JBL"
   },
   {
@@ -116,7 +116,7 @@
     "description": "Barra de sonido compacta con tecnología Bass Reflex, Bluetooth y puerto HDMI ARC. Ideal para mejorar el audio del TV.",
     "old_price": 18990,
     "price": 14990,
-    "category": "Audio",
+    "categories": ["Audio", "Best Offers"],
     "marca": "Sony"
   },
   {
@@ -131,7 +131,7 @@
     "description": "Smart TV de 32 pulgadas con sistema SAPHI, HDR10 y conectividad Wi-Fi integrada.",
     "old_price": 18990,
     "price": 14990,
-    "category": "Televisores",
+    "categories": ["Televisores", "Best Offers"],
     "marca": "Philips"
   },
   {
@@ -146,7 +146,7 @@
     "description": "Heladera cíclica con freezer superior, bajo consumo y control de temperatura manual. Capacidad total 250L.",
     "old_price": 21990,
     "price": 17990,
-    "category": "Heladeras",
+    "categories": ["Heladeras", "Best Offers"],
     "marca": "Patrick"
   }
 ]

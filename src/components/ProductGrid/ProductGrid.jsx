@@ -29,7 +29,6 @@ export default function ProductGrid({ products = [], onAddToCart }) {
           image={p.image}
           name={p.name}
           price={p.price}
-          onAdd={() => onAddToCart?.(p)}
           display="grid"
         />
       ))}
