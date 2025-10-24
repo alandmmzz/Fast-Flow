@@ -7,7 +7,7 @@ export default function CartPage() {
   return (
     <>
         <BackButton fallback="/" label="Volver atrás" />
-        <section className="p-6">
+        <section className="p-6 min-h-[100vh]">
             <h2 className="text-2xl font-bold mb-4">Tu carrito</h2>
 
             {cart.length === 0 ? (

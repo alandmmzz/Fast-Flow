@@ -3,10 +3,13 @@ import { ShoppingCart } from "lucide-react";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
+import { useCart } from "../../context/CartContext";
 
 export default function ProductDetail({ product }) {
+
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
+    const { addToCart } = useCart();
 
     // Arreglo de imágenes para el lightbox
     const slides = product.gallery.map((src) => ({ src }));
@@ -69,7 +72,7 @@ export default function ProductDetail({ product }) {
             <p className="text-xl font-semibold">${product.price}</p>
             </div>
             <button
-            onClick={() => console.log("Agregado al carrito:", product)}
+            onClick={() => addToCart({ id: product.id, image: product.image, name: product.name, price: product.price })}
             className="
                 flex items-center justify-center gap-2
                 bg-blue-600 hover:bg-blue-700 active:bg-blue-800
