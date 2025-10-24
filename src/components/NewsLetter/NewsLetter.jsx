@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Mail } from "lucide-react";
 
-export default function Newsletter() {
+export default function NewsLetter() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
 

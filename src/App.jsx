@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar/NavBar";
 import SearchBar from "./components/SearchBar/SearchBar";
 import BottomNav from "./components/BottomNav/BottomNav";
 import Footer from "./components/Footer/Footer";
-import Newsletter from "./components/Newsletter/Newsletter";
+import NewsLetter from "./components/NewsLetter/NewsLetter";
 import ScrollToTop from "./pages/ScrollToTop";
 
 import HomeContainer from "./pages/Home/HomeContainer";
@@ -45,7 +45,7 @@ function Layout() {
         {/* 🔹 Footer y Newsletter solo si no estamos en rutas donde molesta */}
         {!hideFooterRoutes.includes(location.pathname) && (
             <>
-                <Newsletter/>
+                <NewsLetter/>
                 <Footer />
             </>
         )}
