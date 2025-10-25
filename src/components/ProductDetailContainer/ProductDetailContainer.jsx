@@ -39,15 +39,17 @@ export default function ProductDetailContainer() {
 
     return (
         <>
-        <ProductDetail product={product} />
-
-        {relatedProducts.length > 0 && (
-            <ProductSlider
-            title="También te podrían interesar"
-            products={relatedProducts}
-            onAddToCart={(p) => console.log("Agregar", p)}
-            />
-        )}
+            <ProductDetail product={product} />
+            
+            {relatedProducts.length > 0 && (
+                <div className="mt-8">
+                    <ProductSlider
+                    title="También te podrían interesar"
+                    products={relatedProducts}
+                    onAddToCart={(p) => console.log("Agregar", p)}
+                    />
+                </div>
+            )}
         </>
     );
 }

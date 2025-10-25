@@ -74,14 +74,14 @@ export default function ProductsPage() {
 
     return (
         <section className="px-4 py-6">
-        <BackButton fallback="/categories" label="Volver" />
+            <BackButton fallback="/categories" label="Volver" />
 
-        <h2 className="text-xl font-semibold mb-4 capitalize">{title}</h2>
+            <h2 className="text-xl font-semibold mb-4 capitalize">{title}</h2>
 
-        <ProductGrid
-            products={filteredProducts}
-            onAddToCart={(p) => console.log("Agregado al carrito:", p)}
-        />
+            <ProductGrid
+                products={filteredProducts}
+                onAddToCart={(p) => console.log("Agregado al carrito:", p)}
+            />
         </section>
     );
 }

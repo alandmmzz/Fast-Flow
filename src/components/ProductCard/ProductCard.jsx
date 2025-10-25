@@ -22,7 +22,7 @@ export default function ProductCard({id, image, name, price, display }) {
             className={`
                 ${isGrid ? "w-full sm:w-[200px]" : "w-[160px] sm:w-[180px]"}
                 shrink-0 snap-start h-full
-                bg-white dark:bg-gray-900 rounded-xl overflow-hidden
+                bg-white dark:bg-gray-900 rounded-2xl overflow-hidden
                 border border-gray-100 dark:border-gray-700
                 shadow-sm hover:shadow-md transition-all duration-200
                 active:scale-[0.97]

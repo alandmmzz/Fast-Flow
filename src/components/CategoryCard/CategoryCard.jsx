@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CategoryCard({ name, image }) {
   return (
-    <Link to={`/products/${name.toLowerCase()}`} className="flex-shrink-0">
+    <Link to={`/products/${name?.toLowerCase()}`} className="flex-shrink-0">
       <div
         className="
           shrink-0 snap-start w-[120px] sm:w-[140px]
