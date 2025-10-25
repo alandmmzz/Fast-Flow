@@ -4,6 +4,7 @@ import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import { useCart } from "../../context/CartContext";
+import { toast } from "sonner";
 
 export default function ProductDetail({ product }) {
 
@@ -72,7 +73,9 @@ export default function ProductDetail({ product }) {
             <p className="text-xl font-semibold">${product.price}</p>
             </div>
             <button
-            onClick={() => addToCart({ id: product.id, image: product.image, name: product.name, price: product.price })}
+            onClick={() => {
+                addToCart({ id: product.id, image: product.image, name: product.name, price: product.price });
+                toast.success(`${product.name} fue agregado al carrito 🛒`);}}
             className="
                 flex items-center justify-center gap-2
                 bg-blue-600 hover:bg-blue-700 active:bg-blue-800
